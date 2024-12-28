@@ -64,7 +64,7 @@ public class SimpleMqttClient : IDisposable
     /// Stuur een message naar de broker. Let op het juiste topic! Deze moet uniek zijn op de broker.
     /// </summary>
     /// <param name="message">Het bericht dat verstuurd moet worden</param>
-    public async Task PublishMessage(SimpleMqttMessage message, bool retain = true)
+    public async Task PublishMessage(SimpleMqttMessage message, bool retain = false)
     {
         await this.OpenAndVerifyConnection();
 
@@ -90,7 +90,7 @@ public class SimpleMqttClient : IDisposable
     /// </summary>
     /// <param name="message">te versturen melding als string</param>
     /// <param name="topic">naam van topic</param>
-    public Task PublishMessage(string message, string topic, bool retain = true) => PublishMessage(new() { Topic = topic, Message = message }, retain);
+    public Task PublishMessage(string message, string topic, bool retain = false) => PublishMessage(new() { Topic = topic, Message = message }, retain);
 
     /// <summary>
     /// Luistert naar een topic voor nieuwe berichten

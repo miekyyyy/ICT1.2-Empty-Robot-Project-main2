@@ -27,7 +27,7 @@ public class NoodKnop
       if (_button6.GetState() == "Pressed") // als de knop gedrukt is
          {
             NoodKnopDruk(); //noodstop methode
-            client.PublishMessage("Er is op de noodknop gedrukt", "NoodKnop");
+            client.PublishMessage("Er is gedrukt", "NoodKnop");
             Robot.Wait(100);
             Environment.Exit(0);
          }

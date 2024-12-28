@@ -36,7 +36,7 @@ public class IngenomenMedicijn
             if (_timerMedicijn.Check()) // als de interne klok is afgelopen
             {
                AantalIngenomenMedicijnenX(); // medicijn tel methode
-               client.PublishMessage("Er is een medicijn ingenomen ", "Medicijn_Inname");
+               client.PublishMessage("Er is gedrukt ", "Medicijn_Inname");
             }
          }
          else
